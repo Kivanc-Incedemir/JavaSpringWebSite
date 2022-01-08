@@ -19,7 +19,7 @@ public class ProductDaoImpl implements ProductDao{
     public List<Product> findAllProducts() {
         Session currentSession = entityManager.unwrap(Session.class);
 
-        Query<Product> theQuery = currentSession.createQuery("Select * from Product",Product.class);
+        Query<Product> theQuery = currentSession.createQuery("  from Product",Product.class);
 
         List<Product> productList = null;
 

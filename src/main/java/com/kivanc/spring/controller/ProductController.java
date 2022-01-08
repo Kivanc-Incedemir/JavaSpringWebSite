@@ -30,7 +30,7 @@ public class ProductController {
         theModel.addAttribute("products",theProducts);
 
 
-        return "products/list-products";
+        return "/product";
 
     }
 

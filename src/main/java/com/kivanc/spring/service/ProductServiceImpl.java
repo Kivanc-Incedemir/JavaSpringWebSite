@@ -15,6 +15,7 @@ public class ProductServiceImpl implements ProductService{
     ProductDao productDao;
 
     @Override
+    @Transactional
     public List<Product> findAllProducts() {
         return productDao.findAllProducts();
     }

@@ -1,11 +1,9 @@
 package com.kivanc.spring.entity;
 
-import lombok.Data;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 
-@Data
 @Entity
 @Table(name = "product")
 public class Product {
@@ -13,15 +11,15 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private int Id;
+    private int id;
 
-    @Column(name = "productName")
+    @Column(name = "product_name")
     private String productName;
 
-    @Column(name = "productInStock")
+    @Column(name = "product_in_stock")
     private String productInStock;
 
-    @Column(name = "productPrice")
+    @Column(name = "product_price")
     private BigDecimal productPrice;
 
     @Column(name = "shippable")
@@ -31,11 +29,11 @@ public class Product {
     }
 
     public int getId() {
-        return Id;
+        return id;
     }
 
     public void setId(int id) {
-        Id = id;
+        id = id;
     }
 
     public String getProductName() {
@@ -73,7 +71,7 @@ public class Product {
     @Override
     public String toString() {
         return "Product{" +
-                "Id=" + Id +
+                "Id=" + id +
                 ", productName='" + productName + '\'' +
                 ", productInStock='" + productInStock + '\'' +
                 ", productPrice=" + productPrice +

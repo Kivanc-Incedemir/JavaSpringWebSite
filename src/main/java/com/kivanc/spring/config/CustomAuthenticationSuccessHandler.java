@@ -37,7 +37,7 @@ import java.io.IOException;
 		
 		// forward to home page
 
-		response.sendRedirect(request.getContextPath() + "/employees");
+		response.sendRedirect(request.getContextPath() + "/list");
 	}
 
 }
