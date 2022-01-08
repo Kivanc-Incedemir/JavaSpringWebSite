@@ -36,8 +36,8 @@ import java.io.IOException;
 		session.setAttribute("user", theUser);
 		
 		// forward to home page
-		
-		response.sendRedirect(request.getContextPath() + "/");
+
+		response.sendRedirect(request.getContextPath() + "/employees");
 	}
 
 }

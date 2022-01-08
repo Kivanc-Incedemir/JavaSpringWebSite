@@ -8,8 +8,14 @@ public class DemoController {
 
 	@GetMapping("/")
 	public String showHome() {
-		
+
 		return "index";
+	}
+
+	@GetMapping("/employees")
+	public String showEmployees() {
+		
+		return "leaders";
 	}
 	
 	// add request mapping for /leaders
