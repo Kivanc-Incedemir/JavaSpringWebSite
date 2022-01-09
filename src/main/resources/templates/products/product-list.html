@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.w3.org/1999/xhtml"  layout:decorate="~{layouts/admin_layout}" >
 
 <head>
     <title>Product Directory</title>
@@ -13,7 +13,7 @@
 
 <body>
 
-<div class="container">
+<div class="container"  layout:fragment="content">
 
     <h3>Products Directory</h3>
     <hr>
