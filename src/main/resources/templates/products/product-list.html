@@ -19,7 +19,7 @@
     <hr>
 
     <!-- Add a button -->
-    <a th:href="@{/Product/showFormForAdd}"
+    <a th:href="@{/products/showFormForAdd}"
        class="btn btn-primary btn-sm mb-3">
         Add Product
     </a>
@@ -35,11 +35,11 @@
 
         <tbody>
         <tr th:each="tempProduct : ${products}">
-
-          <!--  <td th:text="${tempProduct.}"/>
-            <td th:text="${tempProduct.lastName}"/>
-            <td th:text="${tempProduct.email}"/>
-    -->
+            <td hidden th:text="${tempProduct.id}"/>
+            <td th:text="${tempProduct.productName}"/>
+            <td th:text="${tempProduct.productInStock}"/>
+            <td th:text="${tempProduct.productPrice}"/>
+            <td th:text="${tempProduct.shippable}"/>
 
             <td>
                 <!-- Add update for button/link -->

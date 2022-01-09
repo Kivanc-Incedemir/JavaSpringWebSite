@@ -1,6 +1,8 @@
 package com.kivanc.spring.entity;
 
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 
@@ -9,7 +11,8 @@ import java.math.BigDecimal;
 public class Product {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO ,generator="native")
+    @GenericGenerator(name = "native",strategy = "native")
     @Column(name = "id")
     private int id;
 
@@ -33,7 +36,7 @@ public class Product {
     }
 
     public void setId(int id) {
-        id = id;
+        this.id = id;
     }
 
     public String getProductName() {

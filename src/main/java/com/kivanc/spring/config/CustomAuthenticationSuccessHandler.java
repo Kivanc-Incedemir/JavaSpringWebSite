@@ -37,7 +37,7 @@ import java.io.IOException;
 		
 		// forward to home page
 
-		response.sendRedirect(request.getContextPath() + "/list");
+		response.sendRedirect(request.getContextPath() + "products/list");
 	}
 
 }
