@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.w3.org/1999/xhtml"  layout:decorate="~{layouts/admin_layout}" >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container"  layout:fragment="content">
+        <hr>
+        <p class="h4 mb-4">Update User</p>
+
+        <form action="#" th:action="@{/user/update}"
+              th:object="${user}" method="POST">
+
+            <!-- Add a hidden form field to handle update -->
+            <input type="hidden" th:field="*{userName}"/>
+
+            <input type="text" th:field="*{firstName}"
+                   class="form-control mb-4 col-4" placeholder="fist name">
+
+            <input type="text" th:field="*{lastName}"
+                   class="form-control mb-4 col-4" placeholder="last name">
+
+            <button type="submit" class="btn btn-info col-2">Save</button>
+        </form>
+        <hr>
+        <a th:href="@{/products/list}">Back to Product list</a>
+    </div>
+</div>
+</body>
+</html>

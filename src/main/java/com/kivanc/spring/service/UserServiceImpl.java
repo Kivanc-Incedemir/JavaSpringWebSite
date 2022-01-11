@@ -5,6 +5,7 @@ import com.kivanc.spring.dao.UserDao;
 import com.kivanc.spring.entity.Role;
 import com.kivanc.spring.entity.User;
 import com.kivanc.spring.user.CrmUser;
+import com.kivanc.spring.user.VM.CrmUserVM;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -53,6 +54,18 @@ public class UserServiceImpl implements UserService {
 		user.setRoles(Arrays.asList(roleDao.findRoleByName("ROLE_EMPLOYEE")));
 
 		 // save user in the database
+		userDao.save(user);
+	}
+
+	@Override
+	@Transactional
+	public void update(CrmUserVM crmUserVM) {
+		User user = userDao.findByUserName(crmUserVM.getUserName());
+		// assign user details to the user object
+		user.setFirstName(crmUserVM.getFirstName());
+		user.setLastName(crmUserVM.getLastName());
+
+		// save user in the database
 		userDao.save(user);
 	}
 

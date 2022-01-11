@@ -3,8 +3,10 @@ package com.kivanc.spring.controller;
 import com.kivanc.spring.entity.Product;
 import com.kivanc.spring.service.ProductService;
 import com.kivanc.spring.service.ProductServiceImpl;
+import com.kivanc.spring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.method.P;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -21,11 +23,13 @@ public class ProductController {
 
 
     @GetMapping("/list")
-    public String listProducts(Model theModel) {
+    public String listProducts(Model theModel, Authentication authentication) {
 
         List<Product> theProducts = productService.findAllProducts();
 
         theModel.addAttribute("products",theProducts);
+        theModel.addAttribute("username",authentication.getName());
+
 
 
         return "products/product-list";
@@ -55,7 +59,7 @@ public class ProductController {
     }
 
     @PostMapping("/save")
-    public String saveEmployee(@ModelAttribute("product") Product theProduct) {
+    public String saveProduct(@ModelAttribute("product") Product theProduct) {
         productService.save(theProduct);
 
         return "redirect:/products/list";
