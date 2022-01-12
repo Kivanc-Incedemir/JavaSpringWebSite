@@ -2,14 +2,14 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.w3.org/1999/xhtml"  layout:decorate="~{layouts/admin_layout}" >
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>User Profile</title>
 </head>
 <body>
 <div class="container"  layout:fragment="content">
         <hr>
         <p class="h4 mb-4">Update User</p>
 
-        <form action="#" th:action="@{/user/update}"
+        <form action="#" th:action="@{/user/settings/update}"
               th:object="${user}" method="POST">
 
             <!-- Add a hidden form field to handle update -->

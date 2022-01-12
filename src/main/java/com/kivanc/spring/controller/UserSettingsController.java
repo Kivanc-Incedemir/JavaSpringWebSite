@@ -10,7 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-@RequestMapping("/user")
+@RequestMapping("/user/settings")
 public class UserSettingsController {
 
     @Autowired
@@ -19,7 +19,7 @@ public class UserSettingsController {
     @GetMapping("/user-settings")
     public String showHome() {
 
-        return "user/user-settings";
+        return "user/settings/user-settings";
     }
 
     @GetMapping("/showFormForUpdate")
@@ -29,7 +29,7 @@ public class UserSettingsController {
 
         theModel.addAttribute("user", theUser);
 
-        return "user/user-settings";
+        return "user/settings/user-settings";
 
     }
     @PostMapping("/update")

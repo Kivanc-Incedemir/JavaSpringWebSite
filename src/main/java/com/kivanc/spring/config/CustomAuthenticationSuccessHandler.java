@@ -23,11 +23,11 @@ import java.io.IOException;
 	public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication)
 			throws IOException, ServletException {
 
-		System.out.println("\n\nIn customAuthenticationSuccessHandler\n\n");
+	//	System.out.println("\n\nIn customAuthenticationSuccessHandler\n\n");
 
 		String userName = authentication.getName();
 		
-		System.out.println("userName=" + userName);
+	//	System.out.println("userName=" + userName);
 
 		User theUser = userService.findByUserName(userName);
 		
@@ -37,7 +37,7 @@ import java.io.IOException;
 		
 		// forward to home page
 
-		response.sendRedirect(request.getContextPath() + "products/list");
+		response.sendRedirect(request.getContextPath() + "user/");
 	}
 
 }
