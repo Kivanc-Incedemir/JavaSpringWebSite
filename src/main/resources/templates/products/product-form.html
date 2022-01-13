@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.w3.org/1999/xhtml"  layout:decorate="~{layouts/admin_layout}" >
 
 <head>
     <title>Save Directory</title>
@@ -15,7 +15,7 @@
 
 <body>
 
-<div class="container">
+<div class="container" layout:fragment="content">
     <h3>Employee Directory</h3>
     <hr>
 
@@ -23,7 +23,6 @@
 
     <form action="#" th:action="@{/products/save}"
           th:object="${product}" method="POST">
-
         <!-- Add a hidden form field to handle update -->
             <input type="hidden" th:field="*{id}"/>
 
@@ -42,7 +41,7 @@
         <button type="submit" class="btn btn-info col-2">Save</button>
     </form>
     <hr>
-    <a th:href="@{/products/list}">Back to Employees list</a>
+    <a th:href="@{/product/list}">Back to Employees list</a>
 </div>
 
 

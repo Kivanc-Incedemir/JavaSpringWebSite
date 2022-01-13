@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JpbDataSourceConfig">
+    <data-sources>
+      <data-source id="07751daa-5687-4cef-a33c-5f57b07ade6d" name="spring_security_custom_user_demo" url="jdbc:mysql://localhost:3306/spring_security_custom_user_demo?AllowPublicKeyRetrieval=True&amp;useSSL=false&amp;serverTimezone=UTC" driverClass="com.mysql.cj.jdbc.Driver" />
+    </data-sources>
+  </component>
+</project>

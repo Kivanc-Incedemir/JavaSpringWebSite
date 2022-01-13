@@ -20,7 +20,7 @@ public class Product {
     private String productName;
 
     @Column(name = "product_in_stock")
-    private String productInStock;
+    private int productInStock;
 
     @Column(name = "product_price")
     private BigDecimal productPrice;
@@ -47,11 +47,11 @@ public class Product {
         this.productName = productName;
     }
 
-    public String getProductInStock() {
+    public int getProductInStock() {
         return productInStock;
     }
 
-    public void setProductInStock(String productInStock) {
+    public void setProductInStock(int productInStock) {
         this.productInStock = productInStock;
     }
 

@@ -61,8 +61,8 @@ public class ProductController {
     @PostMapping("/save")
     public String saveProduct(@ModelAttribute("product") Product theProduct) {
         productService.save(theProduct);
-
-        return "redirect:/products/list";
+        System.out.println("Hey");
+        return "redirect:/user/";
 
     }
 
@@ -71,6 +71,6 @@ public class ProductController {
     {
         productService.deleteProductById(theId);
 
-        return "redirect:/products/list";
+        return "redirect:/user/";
     }
 }

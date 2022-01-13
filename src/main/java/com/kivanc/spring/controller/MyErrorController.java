@@ -19,7 +19,6 @@ public class MyErrorController implements ErrorController {
             Integer statusCode = Integer.valueOf(status.toString());
 
             if(statusCode == HttpStatus.NOT_FOUND.value()) {
-                System.out.println("Hey");
                 return "error/404";
             } else if(statusCode == HttpStatus.UNAUTHORIZED.value()){
                 return "error/401";
