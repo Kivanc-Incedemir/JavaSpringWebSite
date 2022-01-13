@@ -1,12 +1,16 @@
 package com.kivanc.spring.entity;
 
 
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
+@Getter
+@Setter
 @Table(name = "product")
 public class Product {
 
@@ -29,46 +33,6 @@ public class Product {
     private Boolean shippable;
 
     public Product() {
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getProductName() {
-        return productName;
-    }
-
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
-
-    public int getProductInStock() {
-        return productInStock;
-    }
-
-    public void setProductInStock(int productInStock) {
-        this.productInStock = productInStock;
-    }
-
-    public BigDecimal getProductPrice() {
-        return productPrice;
-    }
-
-    public void setProductPrice(BigDecimal productPrice) {
-        this.productPrice = productPrice;
-    }
-
-    public Boolean getShippable() {
-        return shippable;
-    }
-
-    public void setShippable(Boolean shippable) {
-        this.shippable = shippable;
     }
 
     @Override

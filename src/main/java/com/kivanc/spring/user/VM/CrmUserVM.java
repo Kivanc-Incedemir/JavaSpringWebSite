@@ -1,8 +1,13 @@
 package com.kivanc.spring.user.VM;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+@Getter
+@Setter
 public class CrmUserVM {
     @NotNull(message = "is required")
     @Size(min = 1, message = "is required")
@@ -16,27 +21,4 @@ public class CrmUserVM {
     @Size(min = 1, message = "is required")
     private String lastName;
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
 }

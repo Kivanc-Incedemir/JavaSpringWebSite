@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -21,10 +21,20 @@
                                     <h1 class="display-1">401</h1>
                                     <p class="lead">Unauthorized</p>
                                     <p>Access to this resource is denied.</p>
-                                    <a href="/">
-                                        <i class="fas fa-arrow-left me-1"></i>
-                                        Return to Home Page
-                                    </a>
+                                    <div>
+                                        <div th:if="${#authentication.getPrincipal().getUsername()}">
+                                            <a href="/user/">
+                                                <i class="fas fa-arrow-left me-1"></i>
+                                                Return to Home Page
+                                            </a>
+                                        </div>
+                                        <div th:unless="${#authentication.getPrincipal().getUsername()}">
+                                            <a href="/">
+                                                <i class="fas fa-arrow-left me-1"></i>
+                                                Return to Home Page
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
