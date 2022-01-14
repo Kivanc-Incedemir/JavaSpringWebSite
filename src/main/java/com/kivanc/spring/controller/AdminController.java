@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("/user")
-public class UserController {
+@RequestMapping("/admin")
+public class AdminController {
 
     @Autowired
     UserService userService;
@@ -25,7 +25,7 @@ public class UserController {
     @GetMapping("/404")
     public String errorPage() {
 
-        return "user/404";
+        return "admin/404";
     }
 
     @GetMapping("/")
@@ -37,7 +37,7 @@ public class UserController {
         theModel.addAttribute("username", authentication.getName());
 
 
-        return "user/index";
+        return "admin/index";
     }
 
 }

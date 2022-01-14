@@ -10,8 +10,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-@RequestMapping("/user/settings")
-public class UserSettingsController {
+@RequestMapping("/admin/settings")
+public class AdminSettingsController {
 
     @Autowired
     UserService userService;
@@ -29,7 +29,7 @@ public class UserSettingsController {
 
         theModel.addAttribute("user", theUser);
 
-        return "user/settings/user-settings";
+        return "admin/settings/admin-settings";
 
     }
     @PostMapping("/update")
