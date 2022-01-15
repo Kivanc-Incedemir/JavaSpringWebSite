@@ -41,4 +41,39 @@ public class UserDaoImpl implements UserDao {
 		currentSession.saveOrUpdate(theUser);
 	}
 
+	@Override
+	public User findByEmail(String email) {
+		Session currentSession = entityManager.unwrap(Session.class);
+
+		Query<User> theQuery = currentSession.createQuery("FROM User WHERE email=:eMail");
+		theQuery.setParameter("eMail",email);
+
+		User theUser = null;
+
+		try{
+			theUser = theQuery.getSingleResult();
+		} catch (Exception e){
+			theUser = null;
+		}
+		return theUser;
+	}
+
+	@Override
+	public User findByResetPasswordToken(String token) {
+		Session currentSession = entityManager.unwrap(Session.class);
+
+		Query<User> theQuery = currentSession.createQuery("FROM User WHERE reset_password_token =:token");
+		theQuery.setParameter("token",token);
+
+		User theUser = null;
+
+		try{
+			theUser = theQuery.getSingleResult();
+		} catch (Exception e){
+			theUser = null;
+		}
+		return theUser;
+	}
+
+
 }

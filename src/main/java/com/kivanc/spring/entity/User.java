@@ -32,6 +32,9 @@ public class User {
 	@Column(name = "email")
 	private String email;
 
+	@Column(name = "reset_password_token")
+	private String resetPasswordToken;
+
 	@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	@JoinTable(name = "users_roles", 
 	joinColumns = @JoinColumn(name = "user_id"), 

@@ -91,4 +91,34 @@ public class UserServiceImpl implements UserService {
 	public List<GrantedAuthority> getAuthority(String role) {
 		return Collections.singletonList(new SimpleGrantedAuthority(role));
 	}
+
+	@Override
+	@Transactional
+	public void updateResetPasswordToken(String token, String email) throws UsernameNotFoundException{
+	User theUser = userDao.findByEmail(email);
+	if(theUser != null){
+		theUser.setResetPasswordToken(token);
+		userDao.save(theUser);
+	} else{
+		throw new UsernameNotFoundException("Could not found any user with the email" + email);
+	}
+	}
+
+	@Override
+	@Transactional
+	public User getByResetPasswordToken(String token){
+		return userDao.findByResetPasswordToken(token);
+	}
+
+	@Override
+	@Transactional
+	public void updatePassword(User theUser, String newPassword){
+		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+		String encodedPassword = passwordEncoder.encode(newPassword);
+		theUser.setPassword(encodedPassword);
+
+		theUser.setResetPasswordToken(null);
+		userDao.save(theUser);
+	}
+
 }
