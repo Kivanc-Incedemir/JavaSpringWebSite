@@ -4,5 +4,8 @@
     <data-sources>
       <data-source id="07751daa-5687-4cef-a33c-5f57b07ade6d" name="spring_security_custom_user_demo" url="jdbc:mysql://localhost:3306/spring_security_custom_user_demo?AllowPublicKeyRetrieval=True&amp;useSSL=false&amp;serverTimezone=UTC" driverClass="com.mysql.cj.jdbc.Driver" />
     </data-sources>
+    <data-source-infos>
+      <data-source-info id="07751daa-5687-4cef-a33c-5f57b07ade6d" persistence-unit-name="Default" />
+    </data-source-infos>
   </component>
 </project>

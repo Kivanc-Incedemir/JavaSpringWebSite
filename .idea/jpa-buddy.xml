@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JpaBuddyIdeaProjectConfig">
+    <option name="flywayDirectory" value="db\migration" />
+    <option name="sourceDiffType" value="DB" />
     <option name="defaultUnitInitialized" value="true" />
+    <option name="sourceDbValue" value="07751daa-5687-4cef-a33c-5f57b07ade6d" />
+    <option name="sourceModelValue" value="Default" />
+    <option name="targetDbValue" value="07751daa-5687-4cef-a33c-5f57b07ade6d" />
   </component>
 </project>
