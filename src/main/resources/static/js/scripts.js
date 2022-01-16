@@ -1,12 +1,11 @@
 /*!
-* Start Bootstrap - Creative v7.0.5 (https://startbootstrap.com/theme/creative)
+* Start Bootstrap - Grayscale v7.0.4 (https://startbootstrap.com/theme/grayscale)
 * Copyright 2013-2021 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-creative/blob/master/LICENSE)
+* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-grayscale/blob/master/LICENSE)
 */
 //
 // Scripts
 // 
-<security:intercept-url pattern="/resources/**" access="permitAll" />
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -50,11 +49,6 @@ window.addEventListener('DOMContentLoaded', event => {
                 navbarToggler.click();
             }
         });
-    });
-
-    // Activate SimpleLightbox plugin for portfolio items
-    new SimpleLightbox({
-        elements: '#portfolio a.portfolio-box'
     });
 
 });

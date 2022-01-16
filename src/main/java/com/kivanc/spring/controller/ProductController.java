@@ -2,15 +2,11 @@ package com.kivanc.spring.controller;
 
 import com.kivanc.spring.entity.Product;
 import com.kivanc.spring.service.ProductService;
-import com.kivanc.spring.service.ProductServiceImpl;
-import com.kivanc.spring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.method.P;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
