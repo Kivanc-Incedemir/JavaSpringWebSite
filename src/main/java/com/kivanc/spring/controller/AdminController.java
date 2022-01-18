@@ -22,11 +22,6 @@ public class AdminController {
     @Autowired
     ProductService productService;
 
-    @GetMapping("/404")
-    public String errorPage() {
-
-        return "admin/404";
-    }
 
     @GetMapping("/")
     public String home(Model theModel, Authentication authentication) {
@@ -38,6 +33,23 @@ public class AdminController {
 
 
         return "admin/index";
+    }
+
+    @GetMapping("/layout-static")
+    public String layouts_1(){
+        return "admin/layout-static";
+    }
+    @GetMapping("/layout-sidenav-light")
+    public String layouts_2(){
+        return "admin/layout-sidenav-light";
+    }
+    @GetMapping("/charts")
+    public String charts(){
+        return "admin/charts";
+    }
+    @GetMapping("/tables")
+    public String tables(){
+        return "admin/tables";
     }
 
 }

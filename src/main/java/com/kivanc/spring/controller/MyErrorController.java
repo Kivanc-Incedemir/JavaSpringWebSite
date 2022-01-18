@@ -30,9 +30,4 @@ public class MyErrorController implements ErrorController {
 
         return "error/404";
     }
-
-    @Override
-    public String getErrorPath() {
-        return null;
-    }
 }

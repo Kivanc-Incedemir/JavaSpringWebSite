@@ -93,3 +93,15 @@ VALUES
 (3, 1),
 (3, 2),
 (3, 3)
+
+CREATE TABLE `product` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `product_name` varchar(45) DEFAULT NULL,
+  `product_in_stock` int DEFAULT NULL,
+  `product_price` int DEFAULT NULL,
+  `shippable` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+ALTER TABLE `spring_security_custom_user_demo`.`user`
+ADD COLUMN `reset_password_token` VARCHAR(30) NULL AFTER `email`;

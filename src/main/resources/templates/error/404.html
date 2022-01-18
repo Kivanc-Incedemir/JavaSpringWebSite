@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -21,20 +21,12 @@
                         <div class="text-center mt-4">
                             <img class="mb-4 img-error" src="/assets/img/error-404-monochrome.svg"/>
                             <p class="lead">This requested URL was not found on this server.</p>
-                            <div>
-                                <div th:if="${#authentication.getPrincipal().getUsername()}">
+                                <div>
                                 <a href="/admin/">
                                     <i class="fas fa-arrow-left me-1"></i>
                                     Return to Home Page
                                 </a>
                                 </div>
-                                <div th:unless="${#authentication.getPrincipal().getUsername()}">
-                                <a href="/">
-                                    <i class="fas fa-arrow-left me-1"></i>
-                                    Return to Home Page
-                                </a>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
