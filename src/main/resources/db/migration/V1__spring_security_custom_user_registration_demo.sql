@@ -54,7 +54,7 @@ CREATE TABLE `role` (
 
 INSERT INTO `role` (name)
 VALUES 
-('ROLE_EMPLOYEE'),('ROLE_MANAGER'),('ROLE_ADMIN');
+('ROLE_USER'),('ROLE_MANAGER'),('ROLE_ADMIN');
 
 --
 -- Table structure for table `users_roles`
@@ -92,7 +92,7 @@ VALUES
 (2, 2),
 (3, 1),
 (3, 2),
-(3, 3)
+(3, 3) ;
 
 CREATE TABLE `product` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -101,7 +101,7 @@ CREATE TABLE `product` (
   `product_price` int DEFAULT NULL,
   `shippable` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 ALTER TABLE `spring_security_custom_user_demo`.`user`
 ADD COLUMN `reset_password_token` VARCHAR(30) NULL AFTER `email`;
