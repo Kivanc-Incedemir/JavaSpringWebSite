@@ -35,6 +35,7 @@ public class AdminController {
         return "admin/index";
     }
 
+
     @GetMapping("/layout-static")
     public String layouts_1(){
         return "admin/layout-static";
@@ -52,4 +53,17 @@ public class AdminController {
         return "admin/tables";
     }
 
+
+    @GetMapping("/401")
+    public String error401(){
+        return "error/401";
+    }
+    @GetMapping("/404")
+    public String error404(){
+        return "error/404";
+    }
+    @GetMapping("/500")
+    public String error500(){
+        return "error/500";
+    }
 }

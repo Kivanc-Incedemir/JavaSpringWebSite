@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -22,10 +22,18 @@
                                     <p class="lead">Unauthorized</p>
                                     <p>Access to this resource is denied.</p>
                                     <div>
-                                        <a href="/admin/">
-                                            <i class="fas fa-arrow-left me-1"></i>
-                                            Return to Home Page
-                                        </a>
+                                        <div th:if="${#authorization.expression('hasRole(''ROLE_ADMIN'')')}">
+                                            <a href="/admin/">
+                                                <i class="fas fa-arrow-left me-1"></i>
+                                                Return to Home Page
+                                            </a>
+                                        </div>
+                                        <div th:unless="${#authorization.expression('hasRole(''ROLE_ADMIN'')')}">
+                                            <a href="/">
+                                                <i class="fas fa-arrow-left me-1"></i>
+                                                Return to Home Page
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
