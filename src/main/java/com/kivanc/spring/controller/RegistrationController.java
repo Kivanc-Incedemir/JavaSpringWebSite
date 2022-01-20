@@ -10,8 +10,10 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
+import java.net.http.HttpClient;
 import java.util.logging.Logger;
 
 @Controller
@@ -41,9 +43,11 @@ public class RegistrationController {
 
 	@PostMapping("/processRegistrationForm")
 	public String processRegistrationForm(
-				@Valid @ModelAttribute("crmUser") CrmUser theCrmUser,
-				BindingResult theBindingResult,
-				Model theModel) {
+			@Valid @ModelAttribute("crmUser") CrmUser theCrmUser,
+			BindingResult theBindingResult,
+			Model theModel, RedirectAttributes redirectAttributes) {
+
+		redirectAttributes.addFlashAttribute("register_message","You have been successfully registered!");
 
 		String userName = theCrmUser.getUserName();
 		logger.info("Processing registration form for: " + userName);
@@ -68,6 +72,6 @@ public class RegistrationController {
 
         logger.info("Successfully created user: " + userName);
 
-        return "registration-confirmation";
+        return "redirect:/login";
 	}
 }

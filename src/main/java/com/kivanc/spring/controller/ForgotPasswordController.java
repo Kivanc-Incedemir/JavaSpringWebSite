@@ -45,7 +45,9 @@ public class ForgotPasswordController {
         sendEmail(email,resetPasswordLink);
         theModel.addAttribute("message","We have sent a reset password link to your email. Please check.");
         } catch (UsernameNotFoundException ex){
-            theModel.addAttribute("error",ex.getMessage());
+            String msg= ex.getMessage();
+            msg = msg.replaceAll("email","email: ");
+            theModel.addAttribute("error",msg);
         } catch (UnsupportedEncodingException | MessagingException e) {
             theModel.addAttribute("error","Error while sending email");
         }

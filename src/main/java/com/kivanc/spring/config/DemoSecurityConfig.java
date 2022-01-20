@@ -51,7 +51,7 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
                 .rememberMe().tokenRepository(persistentTokenRepository())
                 .and()
                 .formLogin()
-                .loginPage("/showMyLoginPage")
+                .loginPage("/login")
                 .loginProcessingUrl("/authenticateTheUser")
                 .successHandler(customAuthenticationSuccessHandler)
                 .permitAll()

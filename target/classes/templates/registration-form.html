@@ -1,143 +1,64 @@
+
+
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"   layout:decorate="~{layouts/layout}">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-
-	<title>Register New User Form</title>
-	<meta charset="utf-8">
-
-	<style>
-		.error {color:red}
-	</style>
-
+	<title>Creative Colorlib SignUp Form</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- Custom Theme files -->
+	<link href="/css/styles3.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- //Custom Theme files -->
+	<!-- web font -->
+	<link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+	<!-- //web font -->
 </head>
-
 <body>
-
-<div class="w-50 p-3 mb-2 bg-white text-dark" layout:fragment="content">
-
-	<div id="loginbox" style="margin-top: 50px;"
-		 class="mainbox col-md-3 col-md-offset-2 col-sm-6 col-sm-offset-2">
-
-		<div class="panel panel-primary">
-
-			<div class="panel-heading">
-				<div class="panel-title">Register New User</div>
-			</div>
-
-			<div style="padding-top: 30px" class="panel-body">
-
-				<!-- Registration Form -->
-				<form th:action="@{/register/processRegistrationForm}"
-					  th:object="${crmUser}" method="POST"
-					  class="form-horizontal">
-
-					<!-- Place for messages: error, alert etc ... -->
-					<div class="form-group">
-						<div class="col-xs-15">
-							<div>
-
-								<!-- Check for registration error -->
+<!-- main -->
+<div class="main-w3layouts wrapper">
+	<h1>SignUp Form</h1>
+	<div class="main-agileinfo">
+		<div class="agileits-top">
+			<form th:action="@{/register/processRegistrationForm}"
+				  th:object="${crmUser}" method="POST">
+				<!-- Place for messages: error, alert etc ... -->
+				<div class="form-group">
+					<div class="col-xs-15">
+						<div>
+							<!-- Check for registration error -->
 								<div th:if="${registrationError}" class="alert alert-danger col-xs-offset-1 col-xs-10">
-									<span th:text="${registrationError}"></span>
-								</div>
-
+								<span th:text="${registrationError}"></span>
 							</div>
 						</div>
 					</div>
-
-					<!-- User name -->
-					<div style="margin-bottom: 25px" class=" input-group">
-						<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-						<input type="text" th:field="*{userName}" placeholder="username (*)" class="form-control" />
-					</div>
-
-					<div th:if="${#fields.hasErrors('userName')}"
-						 style="margin-bottom: 25px" class="text-danger">
-						<ul>
-							<li th:each="err : ${#fields.errors('userName')}" th:text="'User name ' + ${err}" />
-						</ul>
-					</div>
-
-
-					<!-- Password -->
-					<div style="margin-bottom: 25px" class="input-group">
-						<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-						<input type="password" th:field="*{password}" placeholder="password (*)" class="form-control" th:errorclass="fieldError" />
-					</div>
-					<div th:if="${#fields.hasErrors('password')}"
-						 style="margin-bottom: 25px" class="text-danger">
-						<ul>
-							<li th:each="err : ${#fields.errors('password')}" th:text="'Password ' + ${err}" />
-						</ul>
-					</div>
-
-					<!-- Confirm Password -->
-					<div style="margin-bottom: 25px" class="input-group">
-						<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-						<input type="password" th:field="*{matchingPassword}" placeholder="confirm password (*)" class="form-control" th:errorclass="fieldError" />
-					</div>
-					<div th:if="${#fields.hasErrors('matchingPassword')}"
-						 style="margin-bottom: 25px" class="text-danger">
-						<ul>
-							<li th:each="err : ${#fields.errors('matchingPassword')}" th:text="'Password ' + ${err}" />
-						</ul>
-					</div>
-
-
-					<!-- First name -->
-					<div style="margin-bottom: 25px" class="input-group">
-						<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-						<input type="text" th:field="*{firstName}" placeholder="first name (*)" class="form-control" th:errorclass="fieldError" />
-					</div>
-					<div th:if="${#fields.hasErrors('firstName')}"
-						 style="margin-bottom: 25px" class="text-danger">
-						<ul>
-							<li th:each="err : ${#fields.errors('firstName')}" th:text="'First name ' + ${err}" />
-						</ul>
-					</div>
-
-					<!-- Last name -->
-					<div style="margin-bottom: 25px" class="input-group">
-						<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-						<input type="text" th:field="*{lastName}" placeholder="last name (*)" class="form-control" th:errorclass="fieldError" />
-					</div>
-					<div th:if="${#fields.hasErrors('lastName')}"
-						 style="margin-bottom: 25px" class="text-danger">
-						<ul>
-							<li th:each="err : ${#fields.errors('lastName')}" th:text="'Last name ' + ${err}" />
-						</ul>
-					</div>
-
-					<!-- Email -->
-					<div style="margin-bottom: 25px" class="input-group">
-						<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-						<input type="text" th:field="*{email}" placeholder="email (*)" class="form-control" th:errorclass="fieldError" />
-					</div>
-					<div th:if="${#fields.hasErrors('email')}"
-						 style="margin-bottom: 25px" class="text-danger">
-						<ul>
-							<li th:each="err : ${#fields.errors('email')}" th:text="'Email ' + ${err}" />
-						</ul>
-					</div>
-
-
-					<!-- Register Button -->
-					<div style="margin-top: 10px" class="form-group">
-						<div class="col-sm-6 controls">
-							<button type="submit" class="btn btn-primary">Register</button>
-						</div>
-					</div>
-
-				</form>
-
-			</div>
-
+				</div>
+				<div style="margin-bottom: 25px">
+				<input class="text" type="text" th:field="*{userName}" placeholder="Username" required="" th:errorclass="fieldError">
+				</div>
+				<div style="margin-bottom: 25px">
+				<input class="text email" type="text" th:field="*{firstName}" placeholder="First name" required="" th:errorclass="fieldError">
+				</div>
+				<input class="text email" type="text" th:field="*{lastName}"  placeholder="Last name" required="" th:errorclass="fieldError">
+				<div style="margin-bottom: 25px">
+				<input class="text email"  th:field="*{email}" type="email" placeholder="Email" required="" th:errorclass="fieldError">
+				</div>
+				<input class="text" type="password" th:field="*{password}" placeholder="Password" required="" th:errorclass="fieldError">
+				<div style="margin-bottom: 25px">
+				<input class="text w3lpass" type="password" th:field="*{matchingPassword}" placeholder="Confirm Password" required="" th:errorclass="fieldError">
+				</div>
+					<div class="wthree-text">
+					<label class="anim">
+						<input type="checkbox" class="checkbox" required="">
+						<span>I Agree To The Terms & Conditions</span>
+					</label>
+					<div class="clear"> </div>
+				</div>
+				<input type="submit" value="SIGNUP">
+			</form>
+			<p>Don't have an Account? <a href="/login"> Login Now!</a></p>
 		</div>
-
 	</div>
-
 </div>
-
 </body>
 </html>
