@@ -1,0 +1,19 @@
+body{
+ background-image: url("../../assets/img/bg-masthead.jpg");
+   background-repeat: no-repeat;
+   background-attachment: scroll;
+   background-size: cover;
+}
+
+.grid{
+    display:flex;
+    flex-wrap: wrap;
+    height: 300px;
+    width: 400px;
+}
+
+.return{
+  display: inline-block;
+ font-weight: bold;
+ margin-top: 40px;
+}

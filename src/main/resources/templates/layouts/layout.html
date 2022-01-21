@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
- xmlns:security="http://www.springframework.org/schema/security">
-<security:intercept-url pattern="/resources/**" access="permitAll" />
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 
-<head th:replace="layouts/fragments/header.html :: user_head" />
+<head th:replace="layouts/fragments/header :: user_head" />
 <!-- Main Navigation -->
 <body id="page-top">
 <!-- Navigation-->
-<nav th:replace="layouts/fragments/nav.html :: nav"/>
+<nav th:replace="layouts/fragments/nav :: nav"/>
 
 
 <header class="masthead">
@@ -22,10 +20,10 @@
 </header>
 
 <!-- Footer -->
-<footer th:replace="layouts/fragments/footer.html :: footer" />
+<footer th:replace="layouts/fragments/footer :: footer" />
 <!-- Optional Section -->
 <th:block layout:fragment="optional" />
 
-<div th:replace="layouts/fragments/scripts.html :: scripts"/>
+<div th:replace="layouts/fragments/scripts :: scripts"/>
 </body>
 </html>

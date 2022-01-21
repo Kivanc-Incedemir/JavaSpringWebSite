@@ -12,6 +12,15 @@ public class LoginController {
 		return "login";
 		
 	}
+
+	@GetMapping("/game")
+	public String gamePage() {
+
+		return "game";
+
+	}
+
+
 	
 	// add request mapping for /access-denied
 	

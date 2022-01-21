@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 
-<head th:replace="layouts/fragments/header.html :: admin_head"/>
+<head th:replace="layouts/fragments/header :: admin_head"/>
 
     <body class="sb-nav-fixed">
         <nav th:replace="layouts/fragments/nav :: admin_nav"/>
@@ -12,7 +12,7 @@
                 <section layout:fragment="content">
                     <p>This is filled by the content template.</p>
                 </section>
-                <footer th:replace="layouts/fragments/footer.html :: admin-footer "/>
+                <footer th:replace="layouts/fragments/footer :: admin-footer "/>
             </div>
         </div>
         <div th:replace="layouts/fragments/scripts :: admin_scripts"/>
