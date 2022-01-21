@@ -123,10 +123,15 @@ h1 {
   font-family: 'Roboto', sans-serif;
 }
 
+body {
+  background-image : url("../assets/img/bg-masthead.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;}
+
 /*-- main --*/
 .main-w3layouts {
   padding: 3em 0 1em;
-  background-image : url("../assets/img/bg-masthead.jpg");
+
 }
 
 .main-agileinfo {

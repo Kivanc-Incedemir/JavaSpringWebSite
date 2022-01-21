@@ -93,6 +93,15 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.fr-pass{
+ background-image: url("../../assets/img/bg-masthead.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+
+}
+.fr-pass-h2{ text-align: center;}
+
 hr {
   margin: 1rem 0;
   color: inherit;
