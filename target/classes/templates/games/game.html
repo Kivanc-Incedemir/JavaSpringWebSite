@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"  xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"  layout:decorate="~{layouts/layout}" >
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"  layout:decorate="~{layouts/layout}" >
 <head>
     <meta charset="UTF-8">
     <title>Memory Game</title>
@@ -7,8 +7,8 @@
     <script src="js/game/app.js" charset="utf-8"></script>
 </head>
 <body>
-
     <div layout:fragment="content">
+        <a href="/whack-a-mole">Whack-a Mole</a>
     <h3 class="score">Score:<span id="result"></span></h3>
     <div  class="grid">
     </div>
