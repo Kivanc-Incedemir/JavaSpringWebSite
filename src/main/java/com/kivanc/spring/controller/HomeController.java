@@ -25,6 +25,12 @@ public class HomeController {
 		return "games/whack-a-mole";
 
 	}
+	@GetMapping("/connect-four")
+	public String connect_four() {
+
+		return "games/connect-four";
+
+	}
 
 }
 
