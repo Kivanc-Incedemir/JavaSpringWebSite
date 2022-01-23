@@ -32,6 +32,13 @@ public class HomeController {
 
 	}
 
+	@GetMapping("/snake")
+	public String snake() {
+
+		return "games/snake";
+
+	}
+
 }
 
 

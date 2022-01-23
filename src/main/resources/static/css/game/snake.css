@@ -1,0 +1,27 @@
+.grid {
+    width: 406px;
+    height: 406px;
+    display: flex;
+    flex-wrap: wrap;
+    border-style: solid;
+    background-color: white;
+}
+
+.grid div{
+    width: 40px;
+    height: 40px;
+}
+
+.snake{
+    background-color: blue;
+}
+
+.apple{
+    background-color: purple;
+}
+.return{
+  display: inline-block;
+ font-weight: bold;
+ margin-top: 40px;
+ color: #3c4ae9 !important;
+}
