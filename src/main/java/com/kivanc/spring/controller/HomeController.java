@@ -39,6 +39,13 @@ public class HomeController {
 
 	}
 
+	@GetMapping("/space-invaders")
+	public String space_invaders() {
+
+		return "games/space-invaders";
+
+	}
+
 }
 
 
