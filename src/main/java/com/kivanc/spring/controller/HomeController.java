@@ -45,6 +45,12 @@ public class HomeController {
 		return "games/space-invaders";
 
 	}
+	@GetMapping("/frogger")
+	public String frogger() {
+
+		return "games/frogger";
+
+	}
 
 }
 

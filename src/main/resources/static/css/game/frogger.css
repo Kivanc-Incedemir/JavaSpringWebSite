@@ -1,0 +1,52 @@
+.grid {
+  border: 1px solid;
+  display: flex;
+  flex-wrap: wrap;
+  height: 362px;
+  width: 362px;
+  background-color: white;
+}
+
+.grid div {
+  height: 40px;
+  width: 40px;
+}
+
+.ending-block {
+  background-color: red;
+}
+
+.starting-block {
+  background-color: blue;
+}
+
+.c1 {
+  background-color: black;
+}
+
+.c2,
+.c3 {
+  background-color: grey;
+}
+.l1,
+.l2,
+.l3 {
+  background-color: brown;
+}
+
+.l4,
+.l5 {
+  background-color: lightblue;
+}
+
+.frog {
+  background-color: green;
+}
+
+.return{
+ display: inline-block;
+ font-weight: bold;
+ margin-top: 40px;
+ color: #3c4ae9 !important;
+}
+
