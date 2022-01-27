@@ -1,0 +1,73 @@
+.previous-grid div {
+  background-color: yellow;
+  height: 20px;
+  width: 20px;
+}
+
+
+.grid div{
+  background-color: yellow;
+  height: 20px;
+  width: 20px;
+}
+
+.bttn{
+}
+.display{
+   display:flex;
+   flex-wrap: wrap;
+   gap:10px
+}
+
+.grid {
+  height: 400px;
+  width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.previous-grid {
+  height: 80px;
+  width: 80px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.previous-shape {
+  height: 80px;
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.block {
+  background-image: url("../../assets/img/game_images/tetris/images/blue_block.png");
+}
+
+.block2 {
+  background-image: url("../../assets/img/game_images/tetris/images/purple_block.png");
+}
+
+.block3 {
+  background-image: url("../../assets/img/game_images/tetris/images/green_block.png");
+}
+
+.block4 {
+  background-image: url("../../assets/img/game_images/tetris/images/navy_block.png");
+}
+
+.block5 {
+  background-image: url("../../assets/img/game_images/tetris/images/pink_block.png");
+}
+
+.end {
+  background-image: url("../../assets/img/game_images/tetris/images/blue_block.png");
+}
+
+
+.return{
+  display: inline-block;
+ font-weight: bold;
+ margin-top: 40px;
+ color: #3c4ae9 !important;
+}
+

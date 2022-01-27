@@ -52,6 +52,13 @@ public class HomeController {
 
 	}
 
+	@GetMapping("/tetris")
+	public String tetris() {
+
+		return "games/tetris";
+
+	}
+
 }
 
 
