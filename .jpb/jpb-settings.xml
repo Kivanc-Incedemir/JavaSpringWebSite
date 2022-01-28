@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JpaLiquibaseChangesConfig">
+    <exclude-change idName="persistent_logins" tagName="dropTable" />
+    <exclude-change idName="schema_history" tagName="dropTable" />
+    <exclude-change idName="user#email" tagName="modifyDataType" />
+    <exclude-change idName="user#email" tagName="dropNotNullConstraint" />
+    <exclude-change idName="user#first_name" tagName="modifyDataType" />
+    <exclude-change idName="user#first_name" tagName="dropNotNullConstraint" />
+    <exclude-change idName="role#id" tagName="dropColumn" />
+    <exclude-change idName="role#id" tagName="addColumn" />
+    <exclude-change idName="user#id" tagName="dropColumn" />
+    <exclude-change idName="user#id" tagName="addColumn" />
+    <exclude-change idName="user#last_name" tagName="modifyDataType" />
+    <exclude-change idName="user#last_name" tagName="dropNotNullConstraint" />
+    <exclude-change idName="role#name" tagName="modifyDataType" />
+    <exclude-change idName="user#password" tagName="modifyDataType" />
+    <exclude-change idName="user#password" tagName="dropNotNullConstraint" />
+    <exclude-change idName="product#product_name" tagName="modifyDataType" />
+    <exclude-change idName="product#product_price" tagName="dropColumn" />
+    <exclude-change idName="product#product_price" tagName="addColumn" />
+    <exclude-change idName="user#reset_password_token" tagName="modifyDataType" />
+    <exclude-change idName="users_roles#role_id" tagName="dropColumn" />
+    <exclude-change idName="users_roles#user_id" tagName="dropColumn" />
+    <exclude-change idName="users_roles#role_id" tagName="addColumn" />
+    <exclude-change idName="users_roles#user_id" tagName="addColumn" />
+    <exclude-change idName="user#username" tagName="modifyDataType" />
+    <exclude-change idName="user#username" tagName="dropNotNullConstraint" />
+  </component>
+</project>

@@ -7481,6 +7481,11 @@ textarea.form-control-lg {
   margin-bottom: 3rem !important;
 }
 
+.my-d-1 {
+  margin-top: 8rem !important;
+  margin-bottom: 3rem !important;
+}
+
 .my-auto {
   margin-top: auto !important;
   margin-bottom: auto !important;
@@ -7509,6 +7514,7 @@ textarea.form-control-lg {
 .mt-5 {
   margin-top: 3rem !important;
 }
+
 
 .mt-auto {
   margin-top: auto !important;
@@ -11706,4 +11712,23 @@ body {
 
 .footer {
   padding: 5rem 0;
+}
+
+.background{
+background-color: white;
+display:grid;
+}
+
+.bck-img{
+ background-image: url("../../assets/img/bg-masthead.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+.scnd-bck-img {
+  padding: 10rem 0;
+  background-image: url("/assets/img/bg-signup.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
 }
